@@ -1,0 +1,12 @@
+Anthony,Clinton,David,Dimitri,Ethan,Joe,Kareem,Keith,Malcolm,Michael,Tyler
+Alexis,Alivia,Audrey,Diandra,Geles,Jada,Keyana,Nicole,Nurys,Uche,Zoe
+Ethan,Keyana,false
+Anthony,Geles,false
+Malcolm,Nurys,false
+Dimitri,Nicole,false
+Clinton,Uche,false
+Anthony:Geles,Clinton:Uche,David:Audrey,Dimitri:Diandra,Ethan:Jada,Joe:Zoe,Kareem:Alivia,Keith:Alexis,Malcolm:Nurys,Michael:Keyana,Tyler:Nicole,3
+Anthony:Diandra,Clinton:Uche,David:Geles,Dimitri:Nicole,Ethan:Jada,Joe:Audrey,Kareem:Alivia,Keith:Alexis,Malcolm:Nurys,Michael:Keyana,Tyler:Zoe,1
+Anthony:Jada,Clinton:Uche,David:Keyana,Dimitri:Nurys,Ethan:Alexis,Joe:Zoe,Kareem:Alivia,Keith:Diandra,Malcolm:Geles,Michael:Audrey,Tyler:Nicole,2
+Anthony:Keyana,Clinton:Uche,David:Audrey,Dimitri:Alexis,Ethan:Nicole,Joe:Zoe,Kareem:Diandra,Keith:Nurys,Malcolm:Alivia,Michael:Geles,Tyler:Jada,3
+Anthony:Nicole,Clinton:Jada,David:Audrey,Dimitri:Uche,Ethan:Geles,Joe:Zoe,Kareem:Alivia,Keith:Alexis,Malcolm:Diandra,Michael:Nurys,Tyler:Keyana,1
