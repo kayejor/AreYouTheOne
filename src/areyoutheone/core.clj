@@ -19,8 +19,8 @@
   (let [filename (first args)
         truth? (contains-val? args "--truth")
         matchup? (contains-val? args "--matchup")]
-    (when truth? (println (get-best-truth-booth (io/file filename))))
-    (when matchup? (println (get-best-matchup (io/file filename))))))
+    (when truth? (print-best-truth-booth (io/file filename)))
+    (when matchup? (print-best-matchup (io/file filename)))))
 
 (defn -main
   [& args]
