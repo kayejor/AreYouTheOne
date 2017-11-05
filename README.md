@@ -80,6 +80,6 @@ For 11 person games, the strategy was able to win in 10 rounds 87% of the games 
 
 * Risky lategame strategy - It's possible that in the lategame if there are still many possibilities, it is correct to use a riskier strategy in an attempt to win the game more often, the tradeoff being when you dont win it would take more rounds to get all beams
 * Smarter choice of matchups in the early game - Right now the potential matchup choices in the early game are chosen randomly.
-* Set choices for first two weeks - In an 11 person game, after the first round there are only 18 possibilities of results, yes/no in the truth booth and 0-9 beams.  So we can probably determine a good matchup choice for each possibility ahead of time, rather than take a near random possibility
+* Set choices for first two weeks - In an 11 person game, after the first round there are only 20 possibilities of results, yes/no in the truth booth and 0-9 beams.  So we can probably determine a good matchup choice for each possibility ahead of time, rather than take a near random possibility
 * Factor in blackouts - Not an improvement, but rather another factor that might change the strategy.  In the real show, a "blackout" is when the team gets no beams in a matchup ceremony (outside the confirmed truth booth picks).  Every time a blackout occurs, the prize fund is cut by 25% of the original amount.  This might affect strategy as it would be beneficial (in terms of expected value) to make a guess that has a lower chance of winning but also a lower chance to blackout
 
