@@ -7,7 +7,7 @@
             [clojure.java.io :as io]))
 
 (defn contains-val? [coll value]
-  (when (seq coll) (or (= val (first coll)) (recur (next coll) val))))
+  (when (seq coll) (or (= value (first coll)) (recur (next coll) value))))
 
 (defn process-input-and-run-simulation [args]
   (let [num-people (Integer/parseInt (first args))
