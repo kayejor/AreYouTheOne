@@ -76,6 +76,7 @@
         [tb-results guess-results] (parse-results (nnext lines) name-map)
         rem-poss (filter-poss tb-results guess-results)
         tb-guess (get-smart-tb-guess rem-poss)]
+    (println "Number of possibilities remaining:" (count rem-poss))
     (print-freq-table a-vec b-vec rem-poss)
     (println (convert-tb-names tb-guess a-vec b-vec))))
 
@@ -85,5 +86,6 @@
         [tb-results guess-results] (parse-results (nnext lines) name-map)
         rem-poss (filter-poss tb-results guess-results)
         guess (smart-guess rem-poss)]
+    (println "Number of possibilities remaining:" (count rem-poss))
     (print-beam-freq-table rem-poss guess)
     (println (convert-guess-names guess a-vec b-vec))))
