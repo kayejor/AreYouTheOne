@@ -41,19 +41,33 @@
         rem-poss (reduce #(apply-guess-result %1 (:guess %2) (:beams %2)) rem-poss guess-results)]
     rem-poss))
 
+(defn print-freq-table [rem-poss]
+  (doseq [row (create-freq-matrix rem-poss)]
+    (println (map #(format "%5.1f" (double (/ (* 100 %) (count rem-poss)))) row))))
+
 (defn get-best-tb [tb-results guess-results]
-  (let [rem-poss (filter-poss tb-results guess-results)]
-    (get-smart-tb-guess rem-poss)))
+  (let [rem-poss (filter-poss tb-results guess-results)
+        tb-guess (get-smart-tb-guess rem-poss)]
+    (print-freq-table rem-poss)
+    tb-guess))
+
+(defn print-beam-freq-table [rem-poss guess]
+  (let [freq-array (create-beam-freq-array guess rem-poss)
+        prob-array (map #(double (/ (* 100 %) (count rem-poss))) freq-array)]
+    (println (map #(format "%5d" %) (range (inc (count guess)))))
+    (println (map #(format "%5.1f" %) prob-array))))
 
 (defn get-best-guess [tb-results guess-results]
-  (let [rem-poss (filter-poss tb-results guess-results)]
-    (smart-guess rem-poss)))
+  (let [rem-poss (filter-poss tb-results guess-results)
+        guess (smart-guess rem-poss)]
+    (print-beam-freq-table rem-poss guess)
+    guess))
 
 (defn convert-tb-names [tb-guess a-vec b-vec]
   (map #(name (nth %2 %1)) tb-guess [a-vec b-vec]))
 
 (defn convert-guess-names [guess a-vec b-vec]
-  (map #(vector %1 (nth b-vec %2)) a-vec guess))
+  (map #(vector (name %1) (name (nth b-vec %2))) a-vec guess))
 
 (defn get-best-truth-booth [result-file]
   (let [lines (clojure.string/split (slurp result-file) #"\n")
