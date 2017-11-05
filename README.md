@@ -22,6 +22,7 @@ simulator required args:
 `-sim <num-people> <num-runs>`
 
 extra options:
+
 `--rand` if this flag is set, solutions will be random (otherwise will be in order)  This seems like it would make it easier, but since the early rounds are mostly random it does not change the chance of winning.  By making the solution not random, it's easier to follow the game output.
 
 #### Simulator Output
@@ -36,14 +37,19 @@ To use the scenario solver, the first argument must be `-scenario`
 
 scenario required args:
 `-scenario <filename>`
+
 extra options:
+
 `--truth` get the recommended truth booth guess
+
 `--matchup` get the recommended matchup ceremony pairings
 
 #### Scenario Input File
 
 Comma separated list of "group A" names (i.e. the men)
+
 Comma separated list of "group B" names (i.e. the women)
+
 Any number of lines in one of the two following formats:
   * Truth booth result: takes the form "_nameA_,_nameB_,[true/false]"
   * Matchup result: takes the form "_name1A_:_name1B_,_name2A_:_name2B_,.....,_number of beams_" where there are the same number of pairings as there are people in each group
